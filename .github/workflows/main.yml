@@ -15,7 +15,7 @@ jobs:
           TOP_SECRET='${{ secrets.SECRET2 }}'
           MIDDLE_SECRET='${{ secrets.SECRET3 }}'
           LOW_SECRET='${{ secrets.SECRET4 }}'
-          MEH_SECRET'${{ secrets.SECRET5 }}'
+          MEH_SECRET='${{ secrets.SECRET5 }}'
 
           echo "We have the secrets, doing the build on the ultra secure runner!"
 
