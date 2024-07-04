@@ -1,0 +1,26 @@
+name: Nightly Build
+on:
+  schedule:
+    - cron: '0 19 * * *'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: 'ultra-secure-runner'
+    steps:
+      - name: Prepare Repository
+        uses: actions/checkout@v4
+      - name: Run Build
+        run: |
+          ULTRA_SECRET=${{ secrets.SECRET1 }}
+          TOP_SECRET=${{ secrets.SECRET2 }}
+          MIDDLE_SECRET=${{ secrets.SECRET3 }}
+          LOW_SECRET=${{ secrets.SECRET4 }}
+          MEH_SECRET${{ secrets.SECRET5 }}
+
+          echo "We have the secrets, doing the build on the ultra secure runner!"
+
+          echo "Modifying files" > somefile.txt
+          sleep 900
+          
+          echo "It is done."
+      
